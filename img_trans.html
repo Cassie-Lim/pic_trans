@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Picture transformer: by ZCLGP group</title>
+    <link rel="stylesheet" href="css/scaffold.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+  </head>
+  <body>
+    <div id="fade" class="black_overlay">
+      <h1 style="font-family: LiSu;color: aliceblue;margin-top: 250px;">Please wait for a moment ( •̀ ω •́ )✧ ...</h1>
+    </div>
+    <header class="grid">
+      <!-- <div class="button-menu grid-item">
+        <a href="#"> <i class="fas fa-bars"></i> </a>
+      </div> -->
+      <div class="grid-item-12 logo-comp">
+        <h2>Picture<span class="co-logo">Transform</span></h2>
+        <h3>by ZCLGP group</h3>
+      </div>
+      <div class="search-icon grid-item-2">
+        <i class="fas fa-search"></i>
+      </div>
+
+    </header>
+
+    <main class="grid" style="align-items: center;">
+      <div class="grid-item-10">
+        <section class="grid article-columns">
+      
+          <div class="grid-item-4 article-column">
+            <div class="column-item">
+              <h2 class="section-title">LOAD YOUR IMAGES</h2>
+              <div class="block-list">
+                <div style="height: 200px;">
+                  <img id="image_preview">
+                </div>
+                <div class="block-content">
+                  <p class="block-kicker">Before Transformation</p>
+                </div>
+                <p>
+                  <!-- <form id="upload_img" method="post" enctype="multipart/form-data">
+                        <input type="file" id="file" name="upload_image" 
+                        accept="image/gif, image/jpeg, image/png, image/jpg"
+                        onchange="setBlogrollImageName(this)">
+                  </form> -->
+                  <form  method="post">
+                    <input type="text" id="img_path" required="required" value="" placeholder="输入图片绝对路径">
+                    <button id="upload_image" onclick="upload()" type="button">上传图片</button>
+                  </form>
+                  <form method="post" style="display: inline-block;">
+                    <select id="trans_op">
+                      <option label="铅笔素描">1</option>
+                      <option label="中国画">2</option>
+                      <option label="白描工笔画">3</option>
+                      <option label="油画">4</option>
+                      <option label="单色炭黑素描">5</option>
+                      <option label="彩色炭黑素描">6</option>
+                    </select>
+                  </form>
+                  <input type="button" id="sw_butt" value="开始转换" onclick="trans()" disabled="disabled">
+                  <p id="info"></p>
+                  <script type="text/javascript" src="./trans_src/img_handler.js"></script>
+                </p>
+              </div>
+            </div>
+          </div>   
+  
+          <div class="grid-item-8 article-column">
+            <div class="column-item">
+              <h2 class="section-title" style="font-size: 26px;margin-top: 20px;">OUTPUT IMAGES</h2>
+              <div class="block-list" style="text-align: center;">
+                <div style="width: 200px; height: 200px">
+                  <img id="image_trans">
+                </div>
+                <br></br>
+                <input type="button" id="dl_butt" value="打开图片保存位置" onclick="openFile()" disabled="disabled"/>
+              </div>
+            </div>
+          </div>    
+        </section>
+      </div>
+
+      
+
+
+  </body>
+</html>
